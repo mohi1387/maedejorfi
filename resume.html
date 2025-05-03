@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزومه من</title>
+    <style>
+        /* تنظیم رنگ‌ها */
+        :root {
+            --navy-900: #1c4f63; /* رنگ جدید هدر و فوتر */
+            --yellow-400: #f9c74f;
+            --beige-light: #f5f5f0;
+        }
+
+        /* استایل‌های عمومی */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f0; /* بژ روشن */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3 {
+            color: var(--navy-900);
+        }
+
+        /* نوار ناوبری */
+        nav {
+            background-color: var(--navy-900);
+            padding: 1rem 2rem;
+            text-align: left;
+            display: flex;
+            justify-content: left;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--yellow-400);
+        }
+
+        /* سرصفحه */
+        header {
+            background-color: var(--navy-900);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* بخش درباره من */
+        section.bg-beige-light {
+            background-color: var(--beige-light);
+            padding: 4rem 1rem;
+        }
+
+        section.bg-beige-light h2 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        section.bg-beige-light p {
+            text-align: center;
+            color: #4a4a4a;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        /* بخش تاریخچه شغلی */
+        section.py-10 {
+            padding: 4rem 0;
+        }
+
+        .job-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .job-card {
+            background-color: var(--beige-light);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .job-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .job-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--navy-900);
+        }
+
+        .job-card p {
+            margin-top: 1rem;
+            color: #666;
+        }
+
+        .job-card ul {
+            margin-top: 1rem;
+            padding-left: 20px;
+        }
+
+        .job-card ul li {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* مرکز چین کردن متن تاریخچه شغلی */
+        .job-header {
+            text-align: center; /* متن تاریخچه شغلی در وسط صفحه */
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--navy-900);
+            margin-bottom: 2rem;
+        }
+
+        /* بخش اطلاعات شخصی */
+        section.personal-info {
+            background-color: var(--beige-light);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        section.personal-info h2 {
+            font-size: 2rem;
+        }
+
+        section.personal-info p {
+            color: #4a4a4a;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        /* بخش مهارت‌ها */
+        section.skills {
+            padding: 4rem 1rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        section.skills h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        section.skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        section.skills ul li {
+            background-color: var(--navy-900);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+
+        /* بخش تحصیلات */
+        section.education {
+            background-color: var(--beige-light);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        section.education h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        section.education p {
+            color: #4a4a4a;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        /* بخش تماس */
+        section.bg-navy-900 {
+            background-color: var(--navy-900);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        section.bg-navy-900 a {
+            color: var(--yellow-400);
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        section.bg-navy-900 a:hover {
+            color: #f7e04e; /* زرد روشن‌تر */
+        }
+
+        /* فوتر */
+        footer {
+            background-color: var(--navy-900);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        footer .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        footer .social-links a:hover {
+            color: var(--yellow-400);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- نوار ناوبری -->
+    <nav>
+        <a href="index.html">خانه</a>
+        <a href="projects.html">پروژه‌ها</a>
+        <a href="contact.html">تماس</a>
+        <a href="resume.html">رزومه</a>
+    </nav>
+
+    <!-- سرصفحه -->
+    <header>
+        <h1>مائو</h1>
+        <p>مهندس کامپیوتر | متخصص در توسعه نرم‌افزار و طراحی وب</p>
+    </header>
+
+    <!-- درباره من -->
+    <section class="bg-beige-light">
+        <div class="container">
+            <h2>درباره من</h2>
+            <p>من یک مهندس کامپیوتر با تجربه در طراحی و توسعه وب و فناوری‌های نوین هستم. همیشه در جستجوی چالش‌های جدید برای ارتقاء مهارت‌های فنی خودم هستم. تجربه من در پروژه‌های مختلف به من این امکان را داده که به طور مداوم مهارت‌های خود را در زمینه‌های مختلف بهبود بخشم.</p>
+        </div>
+    </section>
+
+    <!-- تاریخچه شغلی -->
+    <section class="py-10">
+        <div class="container">
+            <div class="job-header">تاریخچه شغلی</div>
+            <div class="job-container">
+                <div class="job-card">
+                    <h3>مهندس نرم‌افزار</h3>
+                    <p>شرکت XYZ | 2020–حال</p>
+                    <ul>
+                        <li>توسعه برنامه‌های کاربردی وب با استفاده از فریم‌ورک‌های React و Node.js.</li>
+                        <li>همکاری با تیم‌های توسعه برای اجرای پروژه‌های پیچیده.</li>
+                        <li>مدیریت پایگاه داده‌های MySQL و MongoDB.</li>
+                    </ul>
+                </div>
+                <div class="job-card">
+                    <h3>دستیار توسعه‌دهنده</h3>
+                    <p>شرکت ABC | 2018–2020</p>
+                    <ul>
+                        <li>ساخت و نگهداری اپلیکیشن‌های وب با استفاده از JavaScript.</li>
+                        <li>حل مسائل فنی و بهینه‌سازی کدهای موجود.</li>
+                        <li>ایجاد و مدیریت مستندات پروژه‌ها.</li>
+                    </ul>
+                </div>
+                <div class="job-card">
+                    <h3>توسعه‌دهنده وب</h3>
+                    <p>شرکت DEF | 2016–2018</p>
+                    <ul>
+                        <li>طراحی و توسعه صفحات وب پویا با استفاده از HTML, CSS, JavaScript.</li>
+                        <li>اجرای بهینه‌سازی‌های لازم برای بهبود سرعت وب‌سایت.</li>
+                    </ul>
+                </div>
+                <div class="job-card">
+                    <h3>دستیار توسعه وب</h3>
+                    <p>شرکت GHI | 2015–2016</p>
+                    <ul>
+                        <li>کمک به تیم در طراحی و پیاده‌سازی صفحات وب.</li>
+                        <li>کار با مشتریان برای درک نیازهای پروژه.</li>
+                    </ul>
+                </div>
+                <div class="job-card">
+                    <h3>متخصص فناوری اطلاعات</h3>
+                    <p>شرکت JKL | 2014–2015</p>
+                    <ul>
+                        <li>پشتیبانی از سیستم‌های IT شرکت و کاربران.</li>
+                        <li>بهبود و ارتقاء زیرساخت‌های فناوری اطلاعات.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- اطلاعات شخصی -->
+    <section class="personal-info">
+        <h2>اطلاعات شخصی</h2>
+        <p>نام: مائو</p>
+        <p>تاریخ تولد: ۱۵ خرداد ۱۳۷۵</p>
+        <p>ایمیل: mao@example.com</p>
+        <p>شماره تلفن: 09123456789</p>
+    </section>
+
+    <!-- مهارت‌ها -->
+    <section class="skills">
+        <h2>مهارت‌ها</h2>
+        <ul>
+            <li>برنامه‌نویسی با React و Node.js</li>
+            <li>طراحی و توسعه وب</li>
+            <li>مدیریت پایگاه داده‌های SQL و NoSQL</li>
+            <li>حل مسائل پیچیده فنی</li>
+        </ul>
+    </section>
+
+    <!-- تحصیلات -->
+    <section class="education">
+        <h2>تحصیلات</h2>
+        <p>کارشناسی ارشد مهندسی کامپیوتر | دانشگاه ABC | ۱۳۹۸–۱۴۰۰</p>
+        <p>کارشناسی مهندسی کامپیوتر | دانشگاه XYZ | ۱۳۹۴–۱۳۹۸</p>
+    </section>
+
+    <!-- تماس -->
+    <section class="bg-navy-900">
+        <div class="container">
+            <h2>تماس با من</h2>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+        <p>&copy; 2025 مائو | تمام حقوق محفوظ است</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/mao" target="_blank">LinkedIn</a>
+            <a href="https://github.com/mao" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>

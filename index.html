@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>رزومه | مائو</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --main-blue: #004e64;
+        --main-yellow: #f6e05e;
+        --complement-blue: #3b6978; /* رنگ مکمل آبی */
+        --complement-beige: #e8dfd4; /* رنگ بژ ملایم */
+        --button-accent: #a1e3d8; /* دکمه آبی روشن */
+        --text-dark: #2d2d2d; /* رنگ متن برای توضیحات */
+      }
+
+      /* استایل‌های بخش‌ها */
+      .section-title {
+        color: var(--main-blue);
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      .section-subtitle {
+        color: var(--complement-blue);
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      /* استایل‌های دکمه‌ها */
+      .btn-main {
+        background-color: var(--button-accent);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-align: center;
+        display: inline-block;
+        transition: background-color 0.3s;
+        margin-top: 1rem;
+      }
+
+      .btn-main:hover {
+        background-color: var(--main-blue);
+      }
+
+      /* استایل‌های کارت‌های سابقه کاری و دوره‌ها */
+      .resume-card {
+        background-color: var(--complement-beige);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .card-subtitle {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--main-blue);
+      }
+
+      .card-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-top: 10px;
+      }
+
+      /* استایل بخش تماس */
+      .contact-section {
+        background-color: var(--complement-blue);
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 2rem;
+      }
+
+      .contact-section a {
+        color: white;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f4f4f4] text-[var(--main-blue)] font-sans">
+
+    <!-- هدر -->
+    <header class="bg-[var(--main-blue)] text-white sticky top-0 shadow-md z-50">
+      <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+        <h1 class="text-xl font-bold">مائو</h1>
+        <nav class="space-x-4 space-x-reverse">
+          <a href="index.html" class="hover:text-[var(--main-yellow)] text-lg">خانه</a>
+          <a href="projects.html" class="hover:text-[var(--main-yellow)] text-lg">پروژه‌ها</a>
+          <a href="resume.html" class="hover:text-[var(--main-yellow)] text-lg">رزومه</a>
+          <a href="contact.html" class="hover:text-[var(--main-yellow)] text-lg">تماس</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- رزومه -->
+    <section class="text-center py-16">
+      <h2 class="section-title">رزومه مائو</h2>
+      <p class="section-subtitle">سابقه کاری و دوره‌های آموزشی من</p>
+     <a href="resume.html" target="_blank" class="btn-main">مشاهده رزومه</a>
+
+
+    </section>
+
+    <!-- سابقه کاری -->
+    <section id="resume" class="py-16">
+      <h2 class="section-title">سابقه کاری</h2>
+      <p class="section-subtitle">تجربه‌ها و پروژه‌های قبلی من</p>
+
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- کارت سابقه کاری ۱ -->
+        <div class="resume-card">
+          <div class="card-title">شرکت ABC</div>
+          <div class="card-subtitle">توسعه‌دهنده نرم‌افزار</div>
+          <div class="card-text">در این شرکت به مدت 3 سال روی پروژه‌های مختلف توسعه نرم‌افزار کار کردم. مهارت‌هایی چون برنامه‌نویسی با زبان‌های Python و JavaScript، طراحی وب و توسعه پایگاه داده‌ها را کسب کردم.</div>
+        </div>
+
+        <!-- کارت سابقه کاری ۲ -->
+        <div class="resume-card">
+          <div class="card-title">شرکت XYZ</div>
+          <div class="card-subtitle">توسعه‌دهنده وب</div>
+          <div class="card-text">در این شرکت به مدت 2 سال روی پروژه‌های وب کار کردم. تجربه‌های گسترده‌ای در طراحی رابط کاربری و تعامل با API‌ها داشتم.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- دوره‌های آموزشی -->
+    <section class="py-16">
+      <h2 class="section-title">دوره‌های آموزشی</h2>
+      <p class="section-subtitle">آموزش‌هایی که گذرانده‌ام</p>
+
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- کارت دوره آموزشی ۱ -->
+        <div class="resume-card">
+          <div class="card-title">دوره تخصصی React</div>
+          <div class="card-subtitle">مدرس: دانشگاه آنلاین</div>
+          <div class="card-text">آموزش جامع React و مفاهیم پیشرفته آن، شامل مدیریت وضعیت، نحوه کار با hooks و routing در برنامه‌های وب</div>
+        </div>
+
+        <!-- کارت دوره آموزشی ۲ -->
+        <div class="resume-card">
+          <div class="card-title">دوره طراحی وب</div>
+          <div class="card-subtitle">مدرس: دانشگاه آنلاین</div>
+          <div class="card-text">مفاهیم طراحی UI/UX و ابزارهای طراحی مانند Figma و Adobe XD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- تماس با من -->
+    <section class="contact-section">
+      <p>آیا سوالی دارید یا می‌خواهید همکاری کنید؟</p>
+      <a href="contact.html">تماس با من</a>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="bg-[var(--main-blue)] text-white py-6 text-center">
+      <p>&copy; 2025 مائو | همه حقوق محفوظ است</p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پروژه‌ها | مائو</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --main-blue: #004e64;
+        --main-yellow: #f6e05e;
+        --complement-blue: #3b6978; /* رنگ مکمل آبی */
+        --complement-beige: #e8dfd4; /* رنگ بژ ملایم */
+        --button-accent: #a1e3d8; /* دکمه آبی روشن */
+        --text-dark: #2d2d2d; /* رنگ متن برای توضیحات */
+        --hover-color: #f0a500; /* رنگ مکمل برای hover */
+      }
+
+      .project-card {
+        width: 300px;
+        background-color: var(--complement-blue);
+        color: white;
+        border-radius: 16px;
+        padding: 20px;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 20px;
+      }
+
+      .project-card:hover {
+        background-color: var(--hover-color); /* تغییر رنگ روی hover */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* سایه روی hover */
+      }
+
+      /* استایل دکمه‌ها */
+      .project-card a {
+        background-color: var(--button-accent);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-align: center;
+        display: inline-block;
+        margin-top: 10px;
+        transition: background-color 0.3s;
+      }
+
+      .project-card a:hover {
+        background-color: var(--main-blue);
+      }
+
+      /* تغییر رنگ توضیحات پروژه */
+      .project-card p {
+        color: var(--text-dark);
+      }
+
+      /* استایل فلش‌ها */
+      .arrow-btn {
+        display: none; /* فلش‌ها رو مخفی میکنیم */
+      }
+
+      /* پروژه‌ها به صورت ردیفی */
+      .slider-wrapper {
+        display: flex;
+        gap: 20px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        padding-bottom: 20px;
+      }
+
+    </style>
+  </head>
+  <body class="bg-[var(--complement-beige)] text-[var(--main-blue)] font-sans">
+
+    <!-- هدر -->
+    <header class="bg-[var(--main-blue)] text-white sticky top-0 shadow-md z-50">
+      <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+        <h1 class="text-xl font-bold">مائو</h1>
+        <nav class="space-x-4 space-x-reverse">
+          <a href="index.html" class="hover:text-[var(--main-yellow)] text-lg">خانه</a>
+          <a href="about.html" class="hover:text-[var(--main-yellow)] text-lg">درباره من</a>
+          <a href="contact.html" class="hover:text-[var(--main-yellow)] text-lg">تماس</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- عنوان -->
+    <section class="text-center py-16 bg-[var(--complement-beige)] shadow-inner">
+      <h2 class="text-4xl font-extrabold mb-4">پروژه‌های من</h2>
+      <p class="text-lg text-[var(--main-blue)]">نمونه‌ای از کارهای توسعه و طراحی من</p>
+    </section>
+
+    <!-- پروژه‌ها -->
+    <section class="py-16 bg-[var(--complement-beige)]">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-6">
+          
+          <!-- پروژه‌ها ۱ تا ۳ -->
+          <div class="project-card">
+            <h3 class="text-2xl font-bold mb-2">پروژه اول</h3>
+            <p class="text-gray-600 mb-4">توضیحی درباره این پروژه.</p>
+            <a href="#">مشاهده</a>
+          </div>
+
+          <div class="project-card">
+            <h3 class="text-2xl font-bold mb-2">پروژه دوم</h3>
+            <p class="text-gray-600 mb-4">توضیحی درباره این پروژه.</p>
+            <a href="#">مشاهده</a>
+          </div>
+
+          <div class="project-card">
+            <h3 class="text-2xl font-bold mb-2">پروژه سوم</h3>
+            <p class="text-gray-600 mb-4">توضیحی درباره این پروژه.</p>
+            <a href="#">مشاهده</a>
+          </div>
+
+          <!-- پروژه‌ها ۴ تا ۶ -->
+          <div class="project-card">
+            <h3 class="text-2xl font-bold mb-2">پروژه چهارم</h3>
+            <p class="text-gray-600 mb-4">توضیحی درباره این پروژه.</p>
+            <a href="#">مشاهده</a>
+          </div>
+
+          <div class="project-card">
+            <h3 class="text-2xl font-bold mb-2">پروژه پنجم</h3>
+            <p class="text-gray-600 mb-4">توضیحی درباره این پروژه.</p>
+            <a href="#">مشاهده</a>
+          </div>
+
+          <div class="project-card">
+            <h3 class="text-2xl font-bold mb-2">پروژه ششم</h3>
+            <p class="text-gray-600 mb-4">توضیحی درباره این پروژه.</p>
+            <a href="#">مشاهده</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="bg-[var(--main-blue)] text-white py-6 text-center">
+      <p>&copy; 2025 مائو | همه حقوق محفوظ است</p>
+    </footer>
+
+  </body>
+</html>

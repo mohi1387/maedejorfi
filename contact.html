@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ارتباط با مائو</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #004e64, #007a8c);
+      overflow: hidden;
+    }
+
+    .ocean {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 200px;
+      background: url("https://www.transparenttextures.com/patterns/waves.png");
+      opacity: 0.1;
+      animation: moveWaves 8s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes moveWaves {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 1000px 0;
+      }
+    }
+
+    .wave-btn {
+      position: relative;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .wave-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/waves.png');
+      opacity: 0.15;
+      animation: waveMove 3s linear infinite;
+    }
+
+    @keyframes waveMove {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body class="text-white font-sans min-h-screen flex items-center justify-center relative px-4">
+
+  <!-- افکت موج در پایین صفحه -->
+  <div class="ocean"></div>
+
+  <div class="text-center space-y-6 z-10">
+    <h1 class="text-4xl font-bold mb-6">ارتباط با من</h1>
+
+    <a href="https://wa.me/989123456789" target="_blank"
+       class="wave-btn block w-64 mx-auto bg-[#a1e3d8] text-[#004e64] font-bold py-4 rounded-xl text-lg shadow-md hover:scale-105 transition-all duration-300 ease-in-out">
+      واتساپ
+    </a>
+
+    <a href="https://instagram.com/username" target="_blank"
+       class="wave-btn block w-64 mx-auto bg-[#fdf3f7] text-[#e1306c] font-bold py-4 rounded-xl text-lg shadow-md hover:scale-105 transition-all duration-300 ease-in-out">
+      اینستاگرام
+    </a>
+
+    <a href="mailto:you@example.com"
+       class="wave-btn block w-64 mx-auto bg-[#f6e05e] text-[#004e64] font-bold py-4 rounded-xl text-lg shadow-md hover:scale-105 transition-all duration-300 ease-in-out">
+      ایمیل
+    </a>
+
+    <!-- دکمه بازگشت -->
+    <a href="index.html"
+       class="mt-8 inline-flex items-center justify-center gap-2 text-sm text-[#b4dfe5] hover:text-white transition duration-300 underline underline-offset-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      بازگشت به صفحه‌ی اصلی
+    </a>
+  </div>
+</body>
+</html>
